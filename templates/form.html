@@ -4,11 +4,28 @@
 	<meta charset="UTF-8">
 	<title>Review Bandit</title>
 </head>
-<body>
+<body style="background-color:rgb(193, 193, 193);">
 <form method="POST">
-	<p>Amazon reviews url</p><br>
-	<input name="URL">
-	<input type="submit">
+	<p style="text-align:center">Multiple reviews analyzer: <br>
+	This method accepts a single amazon reviews URL <br>
+	and analyse all of the reviews returning a data frame,  <br>
+	to analyse a single review try the single method.
+	</p><br>
+	<div style="text-align:center;">
+		<input name="URL">
+		<input type="submit">
+	</div>
+	<a href="http://127.0.0.1:5000/"><p style="text-align:center">Home</p></a>
+	<p style="text-align:center">
+	<a href="http://127.0.0.1:5000/single"><p style="text-align:center">Analyse a single review</p></a>
+	<p style="text-align:center">
+	<img src="static//dualbandit.png" alt="review bandit" style='padding:1px; width: 32%; height: 32%'>
 </form>
 </body>
 </html>
+	
+	
+
+
+
+

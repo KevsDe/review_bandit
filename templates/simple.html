@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Review Bandit</title>
 </head>
-<body>
-
+<body style="background-color:rgb(193, 193, 193);">
+    
 {% for table in tables %}
             {{titles[loop.index]}}
             {{ table|safe }}
 {% endfor %}
+<a href="http://127.0.0.1:5000/"><p style="text-align:center">Home</p></a>
+    <p style="text-align:center">
+        
+        <img src="static//MS_Monster_Dyle.png" alt="review bandit" style='padding:1px; width: 32%; height: 32%'>
 </body>
 </html>
