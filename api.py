@@ -1,13 +1,10 @@
 from flask import Flask, render_template, request, Markup
-import os
 from src.amz_scraping import scrape, reviews_extractor
 from src.text_analysis import spacy_tokenizer
 import pandas as pd
 import pickle
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-# necesario en pythonanywhere
-#PATH=os.path.dirname(os.path.abspath(__file__))
 
 # flask app
 app=Flask(__name__)
