@@ -94,9 +94,7 @@ def random_ua():
 
 from selectorlib import Extractor
 import requests 
-import json 
-import csv
-from dateutil import parser as dateparser
+
 
 # Create an Extractor by reading from the YAML file
 e = Extractor.from_yaml_file('input/selectors.yml')
@@ -123,10 +121,10 @@ def scrape(url):
     res = requests.get(url, headers=headers)
     # Simple check to check if page was blocked (Usually 503)
     if res.status_code > 500:
-        if "To discuss automated access to Amazon data please contact" in r.text:
+        if "To discuss automated access to Amazon data please contact" in res.text:
             print("Page %s was blocked by Amazon. Try again with a different user agent\n"%url)
         else:
-            print("Page %s must have been blocked by Amazon as the status code was %d"%(url,r.status_code))
+            print("Page %s must have been blocked by Amazon as the status code was %d"%(url,res.status_code))
         return None
     # Pass the HTML of the page and create 
     
